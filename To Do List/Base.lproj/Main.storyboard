@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main Table View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="To_Do_List" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainTableViewController" customModule="To_Do_List" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -58,15 +58,18 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="listTableView" destination="7hk-vu-bOb" id="BJi-oY-dQC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="592.79999999999995" y="132.68365817091455"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Task View Controller-->
         <scene sceneID="mb8-hj-6bH">
             <objects>
-                <viewController id="vXb-sU-Ufl" sceneMemberID="viewController">
+                <viewController id="vXb-sU-Ufl" customClass="AddTaskViewController" customModule="To_Do_List" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fhL-6V-3Md">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -74,6 +77,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9l6-YT-xVj">
                                 <rect key="frame" x="171" y="393" width="32" height="30"/>
                                 <state key="normal" title="Add "/>
+                                <connections>
+                                    <action selector="addTaskButtonPressed:" destination="vXb-sU-Ufl" eventType="touchUpInside" id="YYg-8x-6cr"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter task" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gMs-GF-nP4">
                                 <rect key="frame" x="144.5" y="318" width="86.5" height="30"/>
@@ -91,6 +97,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wTY-iB-uVh"/>
                     </view>
+                    <connections>
+                        <outlet property="addButton" destination="9l6-YT-xVj" id="oe9-iF-3Gy"/>
+                        <outlet property="taskTextField" destination="gMs-GF-nP4" id="ekE-Ga-Uul"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z5A-nk-gO2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

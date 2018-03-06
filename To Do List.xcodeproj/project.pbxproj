@@ -14,6 +14,7 @@
 		6CC86ECE204DFCD80086082C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CC86ECC204DFCD80086082C /* LaunchScreen.storyboard */; };
 		6CC86ED9204DFF910086082C /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC86ED8204DFF910086082C /* AddTaskViewController.swift */; };
 		6CC86EDB204E04DB0086082C /* userDefaultConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC86EDA204E04DB0086082C /* userDefaultConstants.swift */; };
+		6CC86EDD204E35410086082C /* todoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC86EDC204E35410086082C /* todoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		6CC86ECF204DFCD80086082C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6CC86ED8204DFF910086082C /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
 		6CC86EDA204E04DB0086082C /* userDefaultConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userDefaultConstants.swift; sourceTree = "<group>"; };
+		6CC86EDC204E35410086082C /* todoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 		6CC86ED6204DFCEB0086082C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6CC86EDC204E35410086082C /* todoCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 				6CC86EC6204DFCD80086082C /* MainTableViewController.swift in Sources */,
 				6CC86ED9204DFF910086082C /* AddTaskViewController.swift in Sources */,
 				6CC86EDB204E04DB0086082C /* userDefaultConstants.swift in Sources */,
+				6CC86EDD204E35410086082C /* todoCell.swift in Sources */,
 				6CC86EC4204DFCD70086082C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

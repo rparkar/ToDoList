@@ -14,7 +14,6 @@ class MainTableViewController: UIViewController, UITableViewDelegate, UITableVie
     
     @IBOutlet weak var listTableView: UITableView!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,18 +32,24 @@ class MainTableViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        
+        if todoList != nil {
+            
+            return (todoList?.count)!
+        } else {
+            
+             return 0
+        }
     
-        return (todoList?.count)!
+       
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
+        let cell = listTableView.dequeueReusableCell(withIdentifier: "todoCell") as! todoCell
         
         if let todo = todoList {
             
-            cell.textLabel?.text = todo[indexPath.row]
+            cell.todoCell.text = todo[indexPath.row]
         }
         
         return cell
@@ -55,7 +60,6 @@ class MainTableViewController: UIViewController, UITableViewDelegate, UITableVie
         if editingStyle == .delete {
             todoList?.remove(at: indexPath.row)
         }
-        
         tableView.reloadData()
     }
     

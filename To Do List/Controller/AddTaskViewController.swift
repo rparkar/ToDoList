@@ -28,6 +28,8 @@ class AddTaskViewController: UIViewController {
             
             todoList?.append(taskTextField.text!)
         }
+        
+        navigationController?.popToRootViewController(animated: true)
     }
     
     
